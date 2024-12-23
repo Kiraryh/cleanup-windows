@@ -5,7 +5,7 @@
 if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
     Write-Host "This script must be run as Administrator." -ForegroundColor Red
     Start-Sleep -Seconds 10
-    ##exit
+    exit
 }
 
 Write-Host "Starting Windows debloater and ad disabler..." -ForegroundColor Green
@@ -77,4 +77,4 @@ Write-Host "Debloating and ad disabling completed. Please restart your system fo
 # Restart the computer
 Write-Host "Restarting the computer in 5 seconds..." -ForegroundColor Yellow
 Start-Sleep -Seconds 5
-##Restart-Computer
+Restart-Computer
