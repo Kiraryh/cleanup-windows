@@ -2,17 +2,15 @@
 REM open admin powershell in hidden mode 
 GUI r
 DELAY 500
-STRING powershell -WindowStyle Hidden
+STRING powershell -Command "Start-Process powershell -Verb runAs"
 DELAY 500
-CONTROL-SHIFT-ENTER
-DELAY 1000
-LEFT
 ENTER
+DELAY 2000
+LEFT
+DELAY 1000
+ENTER
+DELAY 2000
 
 REM Call the debloat.ps1 script from GitHub using iex
 STRING iex (iwr 'https://raw.githubusercontent.com/Kiraryh/cleanup-windows/refs/heads/main/debloat.ps1' -UseBasicParsing)
-ENTER
-
-REM Close PowerShell
-STRING exit
 ENTER
