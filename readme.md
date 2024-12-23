@@ -1,1 +1,1 @@
-making this program to debloat windows and disable ads.
+This program is designed to debloat windows and disable ads.
